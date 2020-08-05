@@ -1,3 +1,8 @@
 data/mnist_test.csv
 data/mnist_train.csv
-esercizi estivi/**
+esercizi estivi/SP100/dataset/**
+esercizi estivi/Book ratings/BX-Book-Ratings-test.csv
+esercizi estivi/Book ratings/BX-Book-Ratings.csv
+esercizi estivi/SP100/test_covid/**
+esercizi estivi/SP100/test_post_covid/**
+esercizi estivi/SP100/test_set/**
