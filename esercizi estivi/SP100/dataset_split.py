@@ -5,7 +5,7 @@ import os
 import pandas as pd
 from tqdm import tqdm
 
-TOP_FOLDER = Path(r'F:\Documenti\machine_learning_avanzato\esercizi\SP100')
+TOP_FOLDER = Path(r'F:\Documenti\machine_learning_avanzato\esercizi estivi\SP100')
 
 _DATASET_SPLITS = {
     'test_post_covid': ('2020-03-20', '2050-01-01'),
@@ -26,4 +26,4 @@ for file_name in tqdm(os.listdir(TOP_FOLDER / 'dataset')):
     df = pd.read_csv(TOP_FOLDER / 'dataset' / file_name, parse_dates=['date'])
     for key, (start_date, end_date) in DATASET_SPLITS.items():
         df_chunk = df[(df.date >= start_date) & (df.date <= end_date)]
-        df_chunk.to_csv(TOP_FOLDER / key / file_name)
+        df_chunk.to_csv(TOP_FOLDER / key / file_name, index=False)
